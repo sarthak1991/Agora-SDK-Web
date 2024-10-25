@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sarthak Agora Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' blob:">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+    <script src="./agora-extension-virtual-background.js"></script>
+
+  </head>
+  <body>
+    <!-- 
+      ************************
+      *
+      The project is divided into two divs, one for video and one for chat. 
+      Having two divs also makes it easier to style with flexbox
+      *
+      ************************
+     -->
+
+    <!-- Stream Button Container (Start) -->
+    <div id="stream-button-container">
+      <div id="stream-join-buttons">
+        <button id="join-as-host-btn" class="btn-normal">
+          <object data="./assets/host.svg" type="image/svg+xml"></object>
+          Join as Host
+        </button>
+
+        <button id="join-as-audience-btn" class="btn-normal">
+          <object data="./assets/audience.svg" type="image/svg+xml"></object>
+          Join as Audience
+        </button>
+      </div>
+    </div>
+    <!-- Stream Button Container (End) -->
+
+    <!-- Video Call Container (Start) -->
+
+    <div id="video-call-container">
+      <div id="video-call"></div>
+      <!-- placeholders for layout views -->
+      <div class="layout-btn">
+        <button id="grid-layout-btn" class="btn-normal">
+          <object data="./assets/gridLayout.svg" type="image/svg+xml"></object>
+          Grid View (default)
+        </button>
+        <button id="active-speaker-layout-btn" class="btn-normal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 48 48"
+          >
+            <g fill="currentColor">
+              <path d="M32 20a8 8 0 1 1-16 0a8 8 0 0 1 16 0" />
+              <path
+                fill-rule="evenodd"
+                d="M23.184 43.984C12.517 43.556 4 34.772 4 24C4 12.954 12.954 4 24 4s20 8.954 20 20s-8.954 20-20 20h-.274q-.272 0-.542-.016M11.166 36.62a3.028 3.028 0 0 1 2.523-4.005c7.796-.863 12.874-.785 20.632.018a2.99 2.99 0 0 1 2.498 4.002A17.94 17.94 0 0 0 42 24c0-9.941-8.059-18-18-18S6 14.059 6 24c0 4.916 1.971 9.373 5.166 12.621"
+                clip-rule="evenodd"
+              />
+            </g>
+          </svg>
+          Active Speaker View
+        </button>
+      </div>
+
+      <!-- Stream Control Buttons -->
+      <div id="stream-controls">
+        <button id="leave-btn" class="btn-normal stream-control-button">
+          <object data="./assets/leaveCall.svg" type="image/svg+xml"></object>
+          Leave Call
+        </button>
+        <button id="mic-btn" class="btn-normal stream-control-button">
+          <object data="./assets/micOn.svg" type="image/svg+xml"></object>
+          Mic On
+        </button>
+        <button id="camera-btn" class="btn-normal stream-control-button">
+          <object data="./assets/cameraOn.svg" type="image/svg+xml"></object>
+          Camera on
+        </button>
+
+
+        <button id="acquire-btn" class="btn-normal stream-control-button">
+          Start Recording
+        </button>
+
+
+        <button id="mediapush-toggle-btn" class="btn-normal stream-control-button">Start Streaming</button>
+
+        <!-- <button id="mediapull-start-btn" class="btn-normal stream-control-button">Start Pulling Media</button>
+        <button id="mediapull-stop-btn" class="btn-normal stream-control-button">Stop Pulling Media</button> -->
+
+        <button id="mediapull-toggle-btn" class="btn-normal stream-control-button" >Start Media Pull</button>
+
+        <button id="screen-share-btn" class="btn-normal stream-control-button">Share Screen</button>
+
+
+        <button id="change-bg-btn" class="btn-normal stream-control-button">Change Background</button>
+        <div id="bg-options" style="display: none;">
+          <button id="blur-bg-btn">Blur</button>
+          <form id="color-picker-form">
+            <input type="color" id="color-picker" value="#00ff00">
+          </form>
+        </div>
+
+        
+        <!-- 
+          PLEASE NOTE: Deliberately not using a form and using a div here instead at (chat-container) as form submission with reload the page.
+         -->
+        <div id="chat-container">
+          <input id="chat-input" type="text" placeholder="Type a message..." />
+          <button id="send-btn">Send</button>
+          <div id="chat-log"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Call Container (End) -->
+  </body>
+  <script src="main-audience.js" type="module"></script>
+</html>
