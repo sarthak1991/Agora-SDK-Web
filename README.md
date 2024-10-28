@@ -82,7 +82,4 @@ To run this project, you should have the following on your computer
 - [@sarthak1991](https://www.github.com/sarthak1991)
 
 
-## Documentation
-
-[Documentation](https://chemical-ninja-321.notion.site/Agora-Video-Call-And-Message-App-Demo-Docs-e0108a79da0c41e8b6b73af37847574a)
 
