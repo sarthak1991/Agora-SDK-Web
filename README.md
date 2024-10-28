@@ -19,13 +19,17 @@ audio communications and the Agora Signaling SDK for messaging.
 ### Go to the project directory
 
 ```bash
-  cd agora-test
+  cd Agora-SDK-Web
 ```
 
 ### Install dependencies
 
 ```bash
   npm install
+```
+or 
+```bash
+ yarn install
 ```
 
 ### Start the server
@@ -36,7 +40,11 @@ audio communications and the Agora Signaling SDK for messaging.
 ```bash
   npm run start
 ```
+ or 
 
+```bash
+  yarn start
+```
 
 
 
@@ -45,13 +53,24 @@ To run this project, you should have the following on your computer
 
 - npm - to run project and install dependencies. (Node Package Manager. Comes packaged with NodeJS Runtime)
 - A browser. To view the demo. (Any broser of choice. I used Firefox Developer Edition while making/testing this)
+- An Agora Account on the [Agora console](https://console.agora.io)
 
+## Setup 
+
+### Setup An Agora Account
+
+- Go to [Agora console](https://console.agora.io) and make an account. 
+![image](assets/CreateProject.png "Create Project on the Agora Console")
+
+- Enable and copy the Primary Certificate (This would be used later to enable a token based auth on your project )
+
+- Similary, copy and save your App Id
 
 ## Tech Stack
 
 **Client:** HTML5, CSS3, TailwindCSS, Javascript as modules
 
-**Server:** npm.
+**Server:** Nodejs, Expressjs + npm.
 
 **Libraries:** AgoraRTC sdk Verion 4.20.0, Agora Signaling SDK Version 1.5.1 available for download [here](https://docs-beta.agora.io/en/sdks?platform=web). 
 
