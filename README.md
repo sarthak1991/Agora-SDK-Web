@@ -66,6 +66,13 @@ To run this project, you should have the following on your computer
 
 - Similary, copy and save your App Id
 
+## Components and SDKs used
+
+### Agora RTC SDK: 
+- Used to enable real time Audio and Video between two clients [as described here](https://docs.agora.io/en/video-calling/get-started/get-started-sdk?platform=web)
+
+- You need to set up an authentication server to generate your own secure tokens [as described here](https://docs.agora.io/en/video-calling/get-started/authentication-workflow?platform=web)
+
 ## Tech Stack
 
 **Client:** HTML5, CSS3, TailwindCSS, Javascript as modules
