@@ -45,8 +45,11 @@ or
 ```bash
   yarn start
 ``` 
-> [!WARNING]  
+> [!CAUTION]  
 > For the project to run, you must populate the CONSTS.js file found at helpers/CONSTS.js.
+
+> [!WARNING]  
+> For the project to run successfully, you must also setup your own token authentication server as described [here](https://github.com/AgoraIO-Community/agora-token-service) which generates tokens and handles the API requests 
 
 
 ### Project Screenshots
